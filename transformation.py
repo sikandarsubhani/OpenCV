@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('C:/Users/navee/Desktop/sikandar/Coding/Python/OpenCV/orange.jpg')
+img = cv.imread('C:/Users/navee/Desktop/sikandar/Coding/Python/OpenCV/melonoma.jpeg')
 #cv.imshow('Flower',img)
 
 # translation of image
@@ -41,7 +41,7 @@ flip = cv.flip(img, 0)
 cv.imshow('Flip', flip)
 
 # Cropping
-cropped = img[200:400, 300:400]
+cropped = img[50:100, 180:200]
 cv.imshow('Cropped', cropped)
 
 # Resizing

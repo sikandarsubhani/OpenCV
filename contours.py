@@ -1,8 +1,8 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.resize(cv.imread('C:/Users/navee/Desktop/sikandar/Coding/Python/OpenCV/trace.jpg'), (500,600), interpolation=cv.INTER_CUBIC)
-cv.imshow('Resized', img)
+img = cv.imread('C:/Users/navee/Desktop/sikandar/Coding/Python/OpenCV/melonoma.jpeg')
+cv.imshow('Melonoma', img)
 
 blank = np.zeros(img.shape,'uint8')
 #gray
@@ -14,7 +14,7 @@ blur = cv.GaussianBlur(gray_image,(5,5),cv.BORDER_DEFAULT) # (kernel size , sigm
 cv.imshow("Blurred Image", blur)
 
 # canny Edges
-canny = cv.Canny(blur, 125, 175)
+canny = cv.Canny(img, 125, 175)
 cv.imshow('Canny Edges', canny)
 
 # ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY)
